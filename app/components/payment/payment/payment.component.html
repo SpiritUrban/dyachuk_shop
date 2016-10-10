@@ -1,0 +1,162 @@
+	<main>
+		<section class="notification-page">
+			<div class="uk-grid uk-margin-remove">
+				<div class="uk-width-large-4-5 uk-container-center uk-padding-remove">
+					<div class="page-title">
+						<p>Payment </p>
+					</div>
+					<div class="form-container wide">
+						<form action="">
+							<table class="payment-table">
+								<tr>
+									<td>
+										<label for="">Owner’s name:</label>
+									</td>
+									<td colspan="2">
+										<div class="input-container half"><input type="text" placeholder="Firstname" required></div>
+										<div class="input-container half"><input type="text" placeholder="Lastname" required></div>
+									</td>
+									<td>
+										<div class="tooltip">
+											<i class="icon-question-circular-button"></i>
+											<p class="tooltip-content">Card holder Name like “Donson-J”</p>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<label for="">Card Number:</label>
+									</td>
+									<td colspan="2">
+										<div class="input-container multiinput">
+											<input type="text" placeholder="****" maxlength="4" name="card-number-1-4" required>
+											<input type="text" placeholder="****" maxlength="4" name="card-number-2-4" required>
+											<input type="text" placeholder="****" maxlength="4" name="card-number-3-4" required>
+											<input type="text" placeholder="****" maxlength="4" name="card-number-4-4" required>
+										</div>
+									</td>
+									<td>
+									</td>
+								</tr>
+								<tr>
+									<td><label for="">Expiration Date:</label></td>
+									<td>
+											<div class="select-wrapper half uk-form-select" data-uk-form-select>
+												<span></span>
+												<i class="uk-icon-caret-down"></i>
+												<select required>
+													<option value="" style="display: none;">Month</option>
+													<option value="January">January</option>
+													<option value="February">February</option>
+													<option value="March">March</option>
+													<option value="April">April</option>
+													<option value="May">May</option>
+													<option value="June">June</option>
+													<option value="July">July</option>
+													<option value="August">August</option>
+													<option value="September">September</option>
+													<option value="October">October</option>
+													<option value="November">November</option>
+													<option value="December">December</option>
+												</select>
+										</div>
+											<div class="select-wrapper half uk-form-select" data-uk-form-select>
+												<span></span>
+												<i class="uk-icon-caret-down"></i>
+												<select required>
+													<option value="" style="display: none;">Year</option>
+													<option value="">2001</option>
+													<option value="">2002</option>
+													<option value="">2003</option>
+													<option value="">2004</option>
+													<option value="">2005</option>
+													<option value="">2006</option>
+													<option value="">2007</option>
+													<option value="">2008</option>
+													<option value="">2009</option>
+													<option value="">2010</option>
+												</select>
+										</div>
+									</td>
+									<td class="cvc-container">
+										<label for="">СVC/CVV:</label>
+										<div class="input-container">
+											<input type="text" placeholder="***" maxlength="3" id="cvc" name="cvc" required>
+										</div>
+									</td>
+									<td>
+										<div class="tooltip image">
+											<i class="icon-question-circular-button"></i>
+											<p class="tooltip-content"><img src="app/img/icons/cvc.png" alt=""></p>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td colspan="2">
+										<div class="checkbox-container">
+											<input id="reg-remember" type="checkbox">
+											<label for="reg-remember">
+												My ID doesn’t have an expiry date.
+											</label>
+										</div>
+									</td>
+									<td></td>
+								</tr>
+							</table>
+							<input type="submit" value="continue">
+						</form>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+	<div id="sidemenu" class="uk-offcanvas">
+		<div class="uk-offcanvas-bar sidemenu-bar">
+			<div class="sidebar-block">
+				<p class="sidebar-block-title">Search</p>
+				<div class="sidebar-block-content">
+					<form action="" id="side-search">
+						<div class="input-container">
+							<input type="text" class="search-text">
+							<button type="submit"></button>
+						</div>
+					</form>
+				</div>
+			</div>
+			<div class="sidebar-block">
+				<p class="sidebar-block-title">Quick filters</p>
+				<div class="sidebar-block-content">
+					<ul class="side-quick-filter-list">
+						<li><a href="">Free</a></li>
+						<li><a href="">High rated</a></li>
+						<li><a href="">Hot&amp;New</a></li>
+						<li><a href="">Popular</a></li>
+						<li><a href="">Free</a></li>
+						<li><a href="">High rated</a></li>
+						<li><a href="">Hot&amp;New</a></li>
+						<li><a href="">Popular</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="sidebar-block">
+				<p class="sidebar-block-title">Filters</p>
+				<div class="sidebar-block-content">
+					<form action="" id="side-filter">
+						<p class="form-title">Select your preferences:</p>
+						<ul>
+							<li><input id="side-filter-check-0" type="checkbox"><label for="side-filter-check-0">Asian</label></li>
+							<li><input id="side-filter-check-1" type="checkbox"><label for="side-filter-check-1">Blonde</label></li>
+							<li><input id="side-filter-check-2" type="checkbox"><label for="side-filter-check-2">Brunett</label></li>
+							<li><input id="side-filter-check-3" type="checkbox"><label for="side-filter-check-3">Happy Histories</label></li>
+							<li><input id="side-filter-check-4" type="checkbox"><label for="side-filter-check-4">Newbee</label></li>
+							<li><input id="side-filter-check-5" type="checkbox"><label for="side-filter-check-5">Filter </label></li>
+							<li><input id="side-filter-check-6" type="checkbox"><label for="side-filter-check-6">Filter Filter</label></li>
+							<li><input id="side-filter-check-7" type="checkbox"><label for="side-filter-check-7">Filter Filter</label></li>
+						</ul>
+						<input type="submit" value="apply">
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>

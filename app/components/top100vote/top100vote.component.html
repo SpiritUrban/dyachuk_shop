@@ -1,0 +1,75 @@
+	<main>
+		<section class="vote-page">
+			<div class="uk-grid">
+				<div class="uk-width-large-1-1 uk-width-xlarge-3-4 uk-container-center">
+					<div class="slider-container">
+						<div class="vote-slider">
+							<div class="vote-slide"><img src="{{slides[position]}}" alt=""></div>
+							<!--div class="vote-slide"><img src="app/img/preview_02.jpg" alt=""></div>
+							<div class="vote-slide"><img src="app/img/preview_01.jpg" alt=""></div>
+							<div class="vote-slide"><img src="app/img/preview_04.jpg" alt=""></div>
+							<div class="vote-slide"><img src="app/img/preview_05.jpg" alt=""></div-->
+						</div>
+						<button type="button" class="slide_button slide_left"  (click)="subtract(1)" > < </button>
+						<button type="button" class="slide_button slide_right" (click)="add(1)"> > </button>
+						<a href="" class="favor-btn"></a>
+						<a href="" class="vote-btn">Vote for me</a>
+						<a href="" class="rating"><span>100</span></a>
+					</div>
+					<div class="model-details">
+						<p class="model-name"><a href="">Amber Heard</a></p>
+						<p class="vote-prize">Выигрыш 18$ - 18,000 очков</p>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+	<div id="sidemenu" class="uk-offcanvas">
+		<div class="uk-offcanvas-bar sidemenu-bar">
+			<div class="sidebar-block">
+				<p class="sidebar-block-title">Search</p>
+				<div class="sidebar-block-content">
+					<form action="" id="side-search">
+						<div class="input-container">
+							<input type="text" class="search-text">
+							<button type="submit"></button>
+						</div>
+					</form>
+				</div>
+			</div>
+			<div class="sidebar-block">
+				<p class="sidebar-block-title">Quick filters</p>
+				<div class="sidebar-block-content">
+					<ul class="side-quick-filter-list">
+						<li><a href="">Free</a></li>
+						<li><a href="">High rated</a></li>
+						<li><a href="">Hot&amp;New</a></li>
+						<li><a href="">Popular</a></li>
+						<li><a href="">Free</a></li>
+						<li><a href="">High rated</a></li>
+						<li><a href="">Hot&amp;New</a></li>
+						<li><a href="">Popular</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="sidebar-block">
+				<p class="sidebar-block-title">Filters</p>
+				<div class="sidebar-block-content">
+					<form action="" id="side-filter">
+						<p class="form-title">Select your preferences:</p>
+						<ul>
+							<li><input id="side-filter-check-0" type="checkbox"><label for="side-filter-check-0">Asian</label></li>
+							<li><input id="side-filter-check-1" type="checkbox"><label for="side-filter-check-1">Blonde</label></li>
+							<li><input id="side-filter-check-2" type="checkbox"><label for="side-filter-check-2">Brunett</label></li>
+							<li><input id="side-filter-check-3" type="checkbox"><label for="side-filter-check-3">Happy Histories</label></li>
+							<li><input id="side-filter-check-4" type="checkbox"><label for="side-filter-check-4">Newbee</label></li>
+							<li><input id="side-filter-check-5" type="checkbox"><label for="side-filter-check-5">Filter </label></li>
+							<li><input id="side-filter-check-6" type="checkbox"><label for="side-filter-check-6">Filter Filter</label></li>
+							<li><input id="side-filter-check-7" type="checkbox"><label for="side-filter-check-7">Filter Filter</label></li>
+						</ul>
+						<input type="submit" value="apply">
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>

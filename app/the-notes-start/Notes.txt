@@ -1,0 +1,60 @@
+Джерела:
+
+Першоджерело https://github.com/olegpolyakov/angular2do
+
+
+Мій репозиторій https://bitbucket.org/spirit_urban/client-angular2
+
+
+Steps:
+
+
+
+1)------------------------------------
+
+На Клауд9 - обновити ноду 
+
+npm -v	
+2.15.5
+
+
+sudo npm install -g n
+
+sudo n stable
+
+
+sudo n 6.3.1
+
+node -v
+	 v4.4.5
+
+
+
+
+2)------------------------------------
+
+На Клауд9 - обновити NPM
+
+npm -v
+	2.15.5
+
+sudo npm install -g npm
+npm -v
+	3.10.5
+
+
+
+
+3)------------------------------------
+
+Інсталювання проекту
+
+npm install
+
+
+
+4)------------------------------------
+
+Запуск проекту
+
+npm start

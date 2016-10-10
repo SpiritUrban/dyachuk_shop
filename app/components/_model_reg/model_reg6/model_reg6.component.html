@@ -1,0 +1,585 @@
+	<main>
+
+		<div class="model-registation-steps">
+			<div class="reg-step-block passed">
+				<span>Profile creation</span>
+				<i class="uk-icon-chevron-right"></i>
+			</div>
+			<div class="reg-step-block passed">
+				<span>Personal data</span>
+				<i class="uk-icon-chevron-right"></i>
+			</div>
+			<div class="reg-step-block passed">
+				<span>Documents</span>
+				<i class="uk-icon-chevron-right"></i>
+			</div>
+			<div class="reg-step-block passed">
+				<span>Account type</span>
+				<i class="uk-icon-chevron-right"></i>
+			</div>
+			<div class="reg-step-block active">
+				<span>Finish</span>
+				<i class="uk-icon-check"></i>
+			</div>
+		</div>
+
+		<section class="model-admin">			
+
+			<form action="" id="model-admin-form">
+				<div class="uk-grid uk-margin-remove">
+					<div class="uk-grid uk-margin-remove uk-padding-remove uk-width-xlarge-1-1 uk-container-center" data-uk-grid-match>
+
+						<!-- Заголовок админ страницы -->
+						<div class="uk-width-large-1-1 uk-width-xlarge-1-1 uk-padding-remove">
+							<div class="page-title">
+								<p>Select your profile settings:</p>
+								
+							</div>
+						</div>
+
+						<!-- Блок ввода рейтинга и аватар модели -->
+						<div class="uk-grid uk-margin-remove uk-width-large-1-1 uk-width-xlarge-2-3 uk-padding-remove model-details">
+							<div class="uk-width-large-2-3 uk-width-xlarge-1-2 uk-padding-remove model-descr">
+
+								<label class="model-avatar" for="upload-avatar">
+
+									<img src=""  alt="">
+
+									<span>Upload your profile photo here</span>
+									<div class="image-wrapper" style="background-image: url();">
+									</div>
+
+									<input type="file" id="upload-avatar" (change)="onChange($event, 'upload-avatar', 'root', 'download immediately' )">
+
+								</label>
+								<div class="input-container">
+									<textarea [(ngModel)]="RD.model_quote" name="" id="model-quote" cols="30" rows="3" placeholder="Add something here about yourself..."></textarea >
+								</div>
+								<div class="model-descr-bottom">
+									<p class="model-name">Amber Heard</p>
+									<div class="model-rate-container">
+										<div id="model-rate" data-rate="35%" > 
+
+											<div class="jq-ry-group-wrapper" style="cursor: pointer" >
+												<div class="jq-ry-normal-group jq-ry-group">
+
+													<svg 
+														(click)="RD.stars_levels = 1" 
+														(mouseover) = 'stars_levels = 1'  
+														(mouseout) = "stars_levels = 0"														
+														[style.fill] = "RD.stars_levels>0 || stars_levels>0 ? 'white' : 'none'"
+														version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 12.705 512 486.59" x="0px" y="0px" xml:space="preserve" width="32px" height="32px" fill="gray">
+														<polygon points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 "></polygon>
+													</svg>
+
+													<svg 
+														(click)="RD.stars_levels = 2" 
+														(mouseover) = 'stars_levels = 2'  
+														(mouseout) = "stars_levels = 0"														
+														[style.fill] = "RD.stars_levels>1 || stars_levels>1 ? 'white' : 'none'"
+														version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 12.705 512 486.59" x="0px" y="0px" xml:space="preserve" width="32px" height="32px" fill="gray" style="margin-left: 20px;">
+														<polygon points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 "></polygon>
+													</svg>
+
+													<svg 
+														(click)="RD.stars_levels = 3" 
+														(mouseover) = 'stars_levels = 3'  
+														(mouseout) = "stars_levels = 0"														
+														[style.fill] = "RD.stars_levels>2 || stars_levels>2 ? 'white' : 'none'"														
+														version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 12.705 512 486.59" x="0px" y="0px" xml:space="preserve" width="32px" height="32px" fill="gray" style="margin-left: 20px;">
+														<polygon points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 "></polygon>
+													</svg>
+
+													<svg 
+														(click)="RD.stars_levels = 4" 
+														(mouseover) = 'stars_levels = 4'  
+														(mouseout) = "stars_levels = 0"														
+														[style.fill] = "RD.stars_levels>3 || stars_levels>3 ? 'white' : 'none'"																
+														version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 12.705 512 486.59" x="0px" y="0px" xml:space="preserve" width="32px" height="32px" fill="gray" style="margin-left: 20px;">
+														<polygon points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 "></polygon>
+													</svg>
+
+													<svg 
+														(click)="RD.stars_levels = 5" 
+														(mouseover) = 'stars_levels = 5'  
+														(mouseout) = "stars_levels = 0"														
+														[style.fill] = "RD.stars_levels>4 || stars_levels>4 ? 'white' : 'none'"															
+														version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 12.705 512 486.59" x="0px" y="0px" xml:space="preserve" width="32px" height="32px" fill="gray" style="margin-left: 20px;">
+														<polygon points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 "></polygon>
+													</svg>
+								
+
+											
+													
+												</div>
+											</div>
+											
+										</div>
+									</div>
+									<div class="rate-input">
+										<p>Select your minute rate:</p>
+										<label for=""><i class="uk-icon-usd"></i>
+											<div class="select-wrapper">
+												<select [(ngModel)]="RD.stars_levels" name="" id=""> <!--RD.rate_minute-->
+													<option value="1">1</option>
+													<option value="2">2</option>
+													<option value="3">3</option>
+													<option value="4">4</option>
+													<option value="5">5</option>
+												</select>
+											</div>
+											/min
+										</label>
+									</div>
+								</div>
+							</div>
+							<!-- Блок ввода параметров модели -->
+							<div class="uk-width-large-1-3 uk-width-xlarge-1-2 uk-padding-remove">
+								<div class="model-param">
+									<div class="input-container">
+										<div class="input-wrapper">
+											<input  [(ngModel)]="RD.model_age" type="text" id="model-age" placeholder="Choose your" value="">
+										</div>
+										<label for="model-age">Age</label>
+									</div>
+									<div class="input-container">
+										<!-- <input type="text" id="model-height" placeholder="Select height" value="172"> -->
+										<div class="select-wrapper">
+											<select [(ngModel)]="RD.model_height" name="model-height" id="model-height">
+												<option value="" style="display: none">Your</option>
+												<option value="110">110</option>
+												<option value="120">120</option>
+												<option value="130">130</option>
+												<option value="140">140</option>
+												<option value="150">150</option>
+												<option value="160">160</option>
+												<option value="170">170</option>
+												<option value="180">180</option>
+												<option value="190">190</option>
+												<option value="290">290</option>
+											</select>
+											<i class="uk-icon-sort-desc"></i>
+										</div>
+										<label for="model-height">Height</label>
+									</div>
+
+									<div class="input-container">
+										<div class="select-wrapper">
+											<select [(ngModel)]="RD.model_breast" name="model-breast" id="model-breast">
+												<option value="Small" selected >Small</option>
+												<option value="Normal"         >Normal</option>
+												<option value="Big"            >Big</option>
+											</select>
+											<i class="uk-icon-sort-desc"></i>
+										</div>
+										<label for="model-breast">Breast Size</label>
+									</div>
+
+									<div class="input-container">
+										<div class="select-wrapper">
+											<select [(ngModel)]="RD.model_preferences" name="model-preferences" id="model-preferences">
+												<option value="Bisexual"          >Bisexual</option>
+												<option value="Heterosexual"      >Heterosexual</option>
+												<option value="Straight"          >Straight</option>
+											</select>
+											<i class="uk-icon-sort-desc"></i>
+										</div>
+										<label for="model-preferences">Sexual Preferences</label>
+									</div>
+
+
+
+									<!--div class="input-container languages-input">
+
+										<div class="select-wrapper" *ngFor="let language of RD.model_language_quality; let i = index" >
+											<select  [(ngModel)]="RD.model_language[i]" name="saved_language_03" id="" >
+												<option value="English" selected >English</option>
+												<option value="Spanish"          >Spanish</option>
+												<option value="Deutsch"          >Deutsch</option>
+											</select>
+											<i class="remove-btn uk-icon-times" (click)="rm_language(i)" ></i>
+										</div>
+
+										<label for="model-language_1">Languages</label>
+										<i (click)="add_language('English')" class="add-btn uk-icon-plus"></i>
+
+									</div-->
+
+
+
+									<div class="input-container languages-input">
+
+										<div class="select-wrapper" *ngFor="let language of RD.model_language_quality; let i = index" >
+											<select  [(ngModel)]="RD.model_language[i]" name="saved_language_03" id="" >
+												<option value="English" selected >English</option>
+												<option value="Spanish"          >Spanish</option>
+												<option value="Deutsch"          >Deutsch</option>
+											</select>
+											<i class="remove-btn uk-icon-times" (click)="rm_element(i, 'model_language', 'model_language_quality' )" ></i>
+										</div>
+
+										<label for="model-language_1">Languages</label>
+										<i (click)="add_element('English',  'model_language', 'model_language_quality' )" class="add-btn uk-icon-plus"></i>
+
+									</div>
+
+								
+
+
+
+								</div>
+							</div>
+							<!-- Фильтры модели -->
+							<div class="uk-width-xlarge-1-1 uk-padding-remove">
+								<div class="model-filter-tags">
+									<div class="select-wrapper">
+										<select [(ngModel)]="RD.model_category01">
+											<option value="" selected >Category</option>
+											<option value="Filter 1">Filter 1</option>
+											<option value="Filter 2">Filter 2</option>
+											<option value="Filter 3">Filter 3</option>
+											<option value="Filter 4">Filter 4</option>
+										</select>
+									</div>
+									<div class="select-wrapper">
+										<select [(ngModel)]="RD.model_category02" >
+											<option value="" selected >Category</option>
+											<option value="Filter 1">Filter 1</option>
+											<option value="Filter 2" >Filter 2</option>
+											<option value="Filter 3">Filter 3</option>
+											<option value="Filter 4">Filter 4</option>
+										</select>
+									</div>
+									<input (click)="next()" type="submit" value="Save">
+								</div>
+							</div>
+						</div>
+                        
+						<!-- Загрузка видео/фото -->
+						<div class="uk-width-large-1-1 uk-width-xlarge-1-3 uk-padding-remove">
+							<div class="model-upload">
+								<a href="#model-video-upload" data-uk-modal="{center:true}" class="video-upload">
+									<i class="icon-play"></i>
+									<span>Upload your first <br>Video here</span>
+								</a>
+								<a href="#model-photo-upload" data-uk-modal="{center:true}" class="photo-upload">
+									<i class="icon-camera-outline"></i>
+									<span>Upload your first <br>PhotoAlbum here</span>
+								</a>
+							</div>
+						</div>
+
+						<div class="uk-width-large-1-1 uk-width-xlarge-1-1 uk-padding-remove">
+							<div class="model-gallery">
+                                
+								<div class="uk-grid-width-small-1-2 uk-grid-width-medium-1-2 uk-grid-width-large-1-3 uk-grid-width-xlarge-1-4" data-uk-grid="{gutter: 10}">
+
+									<div>
+										<div class="model-note-container">
+											<textarea [(ngModel)]="RD.model_note" name="model-note" id="model-note" cols="30" rows="10"></textarea>
+											<label for="model-note">Leave the note for your visitors ;)</label>
+										</div>
+									</div>
+									<div></div>
+									<div>										
+									</div>
+									<div>
+										<img src=""  alt="">
+										<a href="app/img/model-avatar.jpg" >
+											<!--img id = 'model_avatar' src="app/img/model-avatar.jpg" alt=""-->
+											<img id = 'model_avatar' src="" alt="">
+											
+										</a>
+									</div>
+								</div>
+
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</form>
+		</section>
+        
+	</main>
+
+
+
+    
+	
+	<!-- Модальное окно логина для модели -->
+	<div id="model-login-standart" class="uk-modal">
+		<div class="uk-modal-dialog">
+			<a class="uk-modal-close uk-close"></a>
+			<div class="modal-title">
+				<span>Login in to Model/Studio center</span>
+			</div>
+			<p>Wellcome to Diamond Dolls</p>
+			<form action="" id="login-form">
+				<div class="input-container">
+					<input type="text" placeholder="Username or E-mail">
+				</div>
+				<div class="input-container">
+					<input type="password" placeholder="Password">
+				</div>
+				<a href="" class="password-reset">Forgot Username or Password?</a>
+				<div class="input-container">
+					<input type="checkbox" id="remember">
+					<label for="remember">Remember me on this computer <span>(not recommended on public or shared computers)</span></label>
+				</div>
+				<input type="submit" value="Login">
+			</form>
+			<p>Still don’t have account? <a href="">Sign Up</a> now</p>
+		</div>
+	</div>
+
+
+
+
+	<!-- Модальное окно загрузки видео -->
+	<div id="model-video-upload" class="uk-modal">
+		<div class="uk-modal-dialog uk-modal-dialog-large" style="background-image: url('app/img/modal-bg.jpg');" >
+			<a class="uk-modal-close uk-close"></a>
+			<form action="" id="video-upload">
+					<div class="uk-grid modal-header">
+						<div class="uk-width-xlarge-1-1 uk-padding-remove">
+							<div class="modal-title">
+								<p>Upload Video:</p>
+							</div>
+						</div>
+						<div class="uk-width-large-2-3  uk-padding-remove">
+							<div class="input-container">
+								<!-- video file -->
+								<input type="file" id="video-file" accept="video/*"  >
+								<label for="video-file"><span>Browse</span>(File Formats: AVI, FLV, WMV, MP4, MPG or MOV).</label>
+							</div>
+						</div>
+
+						<!-- weight indicator -->
+						<div  class="uk-width-large-1-3  uk-padding-remove" >
+
+							<!-- indicator -->
+							<div id="video-file_" class="notify active loading" style="display: none;">
+								<p>Wait please, Video is uploading...</p>
+								<ul class="loading-indicator">
+									<li></li>
+									<li></li>
+									<li></li>
+								</ul>								
+							</div>
+							<!-- indicator -->
+							<div id="video-file__" class="notify active loading" style="display: none;  width: 200px; padding: 25px;">
+								<p>Ready!</p>
+							</div>
+
+						</div>
+
+					</div>
+					<div class="uk-grid modal-content uk-margin-remove">
+						<div class="uk-width-medium-1-1 uk-width-xlarge-2-3 uk-container-center video-attributes">
+							<div class="input-container">
+								<label for="">Name your video:</label>
+								<div class="input-wrapper">
+									<input [(ngModel)]="RD.video_name" type="text" required name="video-name">
+								</div>
+							</div>
+							<div class="input-container">
+								<label for="">Add categories:</label>
+								<div class="select-wrapper" >
+									<!-- video_categories -->
+									<div class="uk-form-select" *ngFor="let video_c of RD.video_categories_quality; let i = index" data-uk-form-select 
+										onmouseover="this.style.border='2px dashed white';" onmouseout="this.style.border='2px dashed #7b0101';">
+										<span></span>
+										<select [(ngModel)]="RD.video_categories[i]" name="video-category-select"  >
+											<option value="Blond" selected >Blond</option>
+											<option value="SoulMate">SoulMate</option>
+										</select>
+									</div>
+									<i class="uk-icon-plus add-btn" 
+										(click)="add_element('Blond', 'video_categories', 'video_categories_quality' )" 
+										onmouseover="this.style.color='white';" onmouseout="this.style.color='';" ></i>
+								</div>
+							</div>
+							<div class="input-container">
+								<label for="">Theme Video:</label>
+								<div class="select-wrapper">
+									<!-- video_themes -->
+									<div class="uk-form-select" *ngFor="let video_c of RD.video_themes_quality; let i = index" data-uk-form-select
+										onmouseover="this.style.border='2px dashed white';" onmouseout="this.style.border='2px dashed #7b0101';">
+										<span></span>
+										<select [(ngModel)]="RD.video_themes[i]" name="video-actors-select">
+											<option value="Waterpool" selected >Waterpool</option>
+											<option value="Theme">Theme</option>
+										</select>
+									</div>
+									<i class="uk-icon-plus add-btn" (click)="add_element('Theme', 'video_themes', 'video_themes_quality' )" 
+										onmouseover="this.style.color='white';" onmouseout="this.style.color='';"></i>
+								</div>
+							</div>
+							<div class="button-wrapper">
+								<input (click)="onChange($event, 'video-file', 'videos')" type="submit" value="Submit">
+							</div>
+						</div>
+					</div>
+			</form>
+		</div>
+	</div>
+
+	<!-- Модальное окно загрузки фото -->
+	<div id="model-photo-upload" class="uk-modal">
+		<div class="uk-modal-dialog uk-modal-dialog-large" style="background-image: url('app/img/modal-bg.jpg');" >
+			<a class="uk-modal-close uk-close"></a>
+			<form action="" id="photo-upload">
+					<div class="uk-grid modal-header">
+						<div class="uk-width-xlarge-1-1 uk-padding-remove">
+							<div class="modal-title">
+								<p>Upload Photo:</p>
+							</div>
+						</div>
+						<div class="uk-width-large-2-3  uk-padding-remove">
+							<div class="input-container">
+
+								<input type="file" id="photo-file" accept="image/jpeg"  multiple >
+
+								<label for="photo-file"><span>Browse</span>Maximum file size: 15 MB<br>
+								Supported formats: JPG, JPEG, PNG, BMP, Minimum resolution: 1500px X 1500px</label>
+							</div>
+						</div>
+
+							<!-- weight indicator -->
+							<div  class="uk-width-large-1-3  uk-padding-remove" >
+
+								<!-- indicator -->
+								<div id="photo-file_" class="notify active loading" style="display: none;">
+									<p>Wait please, Video is uploading...</p>
+									<ul class="loading-indicator">
+									<li></li>
+									<li></li>
+									<li></li>
+									</ul>               
+								</div>
+								<!-- indicator -->
+								<div id="photo-file__" class="notify active loading" style="display: none;  width: 200px; padding: 25px;">
+									<p style="text-align: center;" >Ready!</p>
+								</div>
+							</div>
+
+					</div>
+					<div class="uk-grid modal-content uk-margin-remove">
+						<div class="uk-width-medium-1-1 uk-width-xlarge-2-3 uk-container-center video-attributes">
+							<div class="input-container">
+								<label for="">Name your album:</label>
+								<div class="input-wrapper">
+									<input [(ngModel)]="RD.photo_albom_name" type="text" required name="album-name">
+								</div>
+							</div>
+							<div class="input-container">
+								<label for="">Add categories:</label>
+								<div class="select-wrapper">
+
+									<div class="uk-form-select" data-uk-form-select 
+										*ngFor="let video_c of RD.photo_categories_quality; let i = index"
+										onmouseover="this.style.border='2px dashed white';" onmouseout="this.style.border='2px dashed #7b0101';">
+
+										<span></span>
+										<select [(ngModel)]="RD.photo_categories[i]"  name="photo-category-select" required>
+											<option value="Blond" selected > Blond    </option>
+											<option value="SoulMate"       > SoulMate </option>
+										</select>
+									</div>
+									<i class="uk-icon-plus add-btn" 
+										(click)="add_element('Blond', 'photo_categories', 'photo_categories_quality' )"
+										onmouseover="this.style.color='white';" onmouseout="this.style.color='';"></i>
+								</div>
+							</div>
+<!-- 							<div class="input-container">
+								<label for="">Theme album:</label>
+								<div class="select-wrapper">
+									<div class="uk-form-select" data-uk-form-select>
+										<span></span>
+										<select name="video-actors-select">
+											<option value="" style="display: none;">Theme</option>
+											<option value="">Waterpool</option>
+											<option value="">Theme</option>
+										</select>
+									</div>
+									<i class="uk-icon-plus add-btn"></i>
+								</div>
+							</div> -->
+							<div class="button-wrapper">
+								<input (click)="onChange($event, 'photo-file', 'photos', 'download at the click of a button')" type="submit" value="Submit">
+							</div>
+						</div>
+					</div>
+			</form>
+		</div>
+	</div>
+
+	<!-- Стандартное мобильное боковое меню -->
+	<div id="sidemenu" class="uk-offcanvas">
+		<div class="uk-offcanvas-bar sidemenu-bar">
+			<div class="sidebar-block">
+				<p class="sidebar-block-title">Search</p>
+				<div class="sidebar-block-content">
+					<form action="" id="side-search">
+						<div class="input-container">
+							<input type="text" class="search-text">
+							<button type="submit"></button>
+						</div>
+					</form>
+				</div>
+			</div>
+			<div class="sidebar-block">
+				<p class="sidebar-block-title">Quick filters</p>
+				<div class="sidebar-block-content">
+					<ul class="side-quick-filter-list">
+						<li><a href="">Free</a></li>
+						<li><a href="">High rated</a></li>
+						<li><a href="">Hot&amp;New</a></li>
+						<li><a href="">Popular</a></li>
+						<li><a href="">Free</a></li>
+						<li><a href="">High rated</a></li>
+						<li><a href="">Hot&amp;New</a></li>
+						<li><a href="">Popular</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="sidebar-block">
+				<p class="sidebar-block-title">Filters</p>
+				<div class="sidebar-block-content">
+					<form action="" id="side-filter">
+						<p class="form-title">Select your preferences:</p>
+						<div class="range-slider-wrapper">
+							<p class="block-title">Duration (minutes)</p>
+							<input type="text" id="side-range-slider">
+							<div id="side-ui-range-slider"></div>
+							<label for="range-slider">
+								<span>0</span>
+								<span>10</span>
+								<span>20</span>
+								<span>30</span>
+								<span>40+</span>
+							</label>
+						</div>
+						<ul>
+							<li><input id="side-filter-check-8" type="checkbox"><label for="side-filter-check-8">All</label></li>
+							<li><input id="side-filter-check-9" type="checkbox"><label for="side-filter-check-9">Professional</label></li>
+							<li><input id="side-filter-check-10" type="checkbox"><label for="side-filter-check-10">Homemade</label></li>
+						</ul>
+						<p class="form-title">Categories</p>
+						<ul>
+							<li><input id="side-filter-check-0" type="checkbox"><label for="side-filter-check-0">Asian</label></li>
+							<li><input id="side-filter-check-1" type="checkbox"><label for="side-filter-check-1">Blonde</label></li>
+							<li><input id="side-filter-check-2" type="checkbox"><label for="side-filter-check-2">Brunett</label></li>
+							<li><input id="side-filter-check-3" type="checkbox"><label for="side-filter-check-3">Happy Histories</label></li>
+							<li><input id="side-filter-check-4" type="checkbox"><label for="side-filter-check-4">Newbee</label></li>
+							<li><input id="side-filter-check-5" type="checkbox"><label for="side-filter-check-5">Filter </label></li>
+							<li><input id="side-filter-check-6" type="checkbox"><label for="side-filter-check-6">Filter Filter</label></li>
+							<li><input id="side-filter-check-7" type="checkbox"><label for="side-filter-check-7">Filter Filter</label></li>
+						</ul>
+						<input type="submit" value="apply">
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>

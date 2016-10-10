@@ -1,0 +1,64 @@
+﻿test cloud9
+
+And Local
+
+�������:
+
+������������ https://github.com/olegpolyakov/angular2do
+
+
+̳� ����������� https://bitbucket.org/spirit_urban/client-angular2
+
+
+Steps:
+
+
+
+1)------------------------------------
+
+�� �����9 - �������� ���� 
+
+npm -v	
+2.15.5
+
+
+sudo npm install -g n
+
+sudo n stable
+
+
+sudo n 6.3.1
+
+node -v
+	 v4.4.5
+
+
+
+
+2)------------------------------------
+
+�� �����9 - �������� NPM
+
+npm -v
+	2.15.5
+
+sudo npm install -g npm
+npm -v
+	3.10.5
+
+
+
+
+3)------------------------------------
+
+������������ �������
+
+npm install
+
+
+
+4)------------------------------------
+
+������ �������
+
+npm start

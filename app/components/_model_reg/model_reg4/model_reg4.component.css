@@ -1,0 +1,25 @@
+.progres{
+    height:100%; 
+    width: 0%; 
+    display: none; 
+    background: #f4ffa0; 
+    opacity: 0.5; 
+    position: absolute;  
+    border-radius: 8px; 
+    left: 0; 
+    box-shadow: inset #FF0008 0 0 35px 10px, 
+                        #FF0002 0 0 17px 4px; 
+}
+
+label {
+    position: relative;
+}
+
+/*
+.alert{    
+    box-shadow: inset #ff0000 0 0 40px 10px,
+	                  #ff0000 0 0 24px 12px;
+}
+.clear_alert{
+    box-shadow: none !important;
+}*/

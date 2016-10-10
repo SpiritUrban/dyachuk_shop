@@ -1,0 +1,7 @@
+.alert{    
+    box-shadow: inset #ff0000 0 0 40px 10px,
+	                  #ff0000 0 0 24px 12px;
+}
+.clear_alert{
+    box-shadow: none !important;
+}

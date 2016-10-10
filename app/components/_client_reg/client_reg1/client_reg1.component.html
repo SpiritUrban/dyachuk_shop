@@ -1,0 +1,252 @@
+	
+
+	<main>
+		<div class="registation-steps">
+			<div class="uk-grid uk-width-large-1-1 uk-width-xlarge-2-3 uk-container-center">
+				<div class="uk-width-medium-1-3 reg-step-block active">
+					<span>Step1</span>
+					<span>Profile creation</span>
+				</div>
+				<div class="uk-width-medium-1-3 reg-step-block">
+					<span>Step2</span>
+					<span>Model subscription</span>
+				</div>
+				<div class="uk-width-medium-1-3 reg-step-block">
+					<span>Step3</span>
+					<span>Payment method</span>
+				</div>
+			</div>
+		</div>
+		<section class="registration">
+			<div class="uk-grid uk-margin-remove">
+				<div class="uk-width-large-1-1 uk-width-xlarge-3-4 uk-container-center uk-padding-remove">
+					<form action="" id="registration">
+						<table class="form-container">
+							<tr>
+								<td></td>
+								<td>
+									<p class="form-title">Registration</p>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td></td>
+								<td>
+									<div class="input-container">
+										<input [(ngModel)]="RD.login" type="text" id="reg-username" placeholder="username" required>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td></td>
+								<td>
+									<div class="input-container">
+										<input [(ngModel)]="RD.email" type="text" id="reg-username" placeholder="Email" required>
+									</div>
+								</td>
+								<td></td>
+							</tr>							
+							<tr>
+								<td></td>
+								<td>
+									<div class="input-container">
+										<input [(ngModel)]="RD.password" type="password" id="reg-password" placeholder="password" required>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td></td>
+								<td>
+									<div class="checkbox-container">
+										<input [(ngModel)]="RD.checkbox" id="reg-remember" type="checkbox">
+										<label for="reg-remember">
+											Remember me on this computer
+											<span>(not recommended on public or shared computers)</span>
+										</label>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>Name:</td>
+								<td>
+									<div class="input-container">
+										<input [(ngModel)]="RD.firstname" type="text" id="reg-name">
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>Surname:</td>
+								<td>
+									<div class="input-container">
+										<input [(ngModel)]="RD.lastname" type="text" id="reg-surname">
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>Gender:</td>
+								<td>
+									<div class="input-container">
+										<select [(ngModel)]="RD.gender" name="gender" id="reg-gender">
+											<option value="placeholder" style="display: none;"></option>
+											<option value="male">Male</option>
+											<option value="female">Female</option>
+										</select>
+										<i class="uk-icon-caret-down"></i>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>Age:</td>
+								<td>
+									<div class="input-container">
+										<input [(ngModel)]="RD.age"type="text" id="reg-age">
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>Country:</td>
+								<td>
+									<div class="input-container">
+										<select [(ngModel)]="RD.country" name="country" id="reg-country">
+											<option value="placeholder" style="display: none;"></option>
+											<option value="Australia">Australia</option>
+											<option value="USA">USA</option>
+										</select>
+										<i class="uk-icon-caret-down"></i>
+									</div>
+								</td>
+								<td>
+									<div class="tooltip">
+										<i class="icon-question-circular-button"></i>
+										<p class="tooltip-content">We used to give best relevanted content for your country.</p>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>City:</td>
+								<td>
+									<div class="input-container">
+										<input [(ngModel)]="RD.city" type="text" id="reg-city">
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>Index:</td>
+								<td>
+									<div class="input-container">
+										<input [(ngModel)]="RD.index" type="text" id="reg-index">
+									</div>
+								</td>
+								<td>
+									<div class="tooltip">
+										<i class="icon-question-circular-button"></i>
+										<p class="tooltip-content">Also known as Post Index or code postal service</p>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>Address:</td>
+								<td>
+									<div class="input-container">
+										<input [(ngModel)]="RD.address" type="text" id="reg-address">
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>Relationship Status:</td>
+								<td>
+									<div class="input-container">
+										<input [(ngModel)]="RD.relationship" type="text" id="reg-relationship">
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>Interested In:</td>
+								<td>
+									<div class="input-container">
+										<input [(ngModel)]="RD.interes" type="text" id="reg-interes">
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td></td>
+								<td>
+									<div class="input-container">
+										<!--input type="submit" value="Next"-->
+										<input (click)="next()" type="submit" value="next">
+									</div>
+								</td>
+								<td></td>
+							</tr>
+						</table>
+					</form>
+				</div>
+			</div>
+		</section>
+	</main>
+
+
+
+
+	<!-- Бокове меню ( працйює при звуженому екрані) -->
+	<div id="sidemenu" class="uk-offcanvas">
+		<div class="uk-offcanvas-bar sidemenu-bar">
+			<div class="sidebar-block">
+				<p class="sidebar-block-title">Search</p>
+				<div class="sidebar-block-content">
+					<form action="" id="side-search">
+						<div class="input-container">
+							<input type="text" class="search-text">
+							<button type="submit"></button>
+						</div>
+					</form>
+				</div>
+			</div>
+			<div class="sidebar-block">
+				<p class="sidebar-block-title">Quick filters</p>
+				<div class="sidebar-block-content">
+					<ul class="side-quick-filter-list">
+						<li><a href="">Free</a></li>
+						<li><a href="">High rated</a></li>
+						<li><a href="">Hot&amp;New</a></li>
+						<li><a href="">Popular</a></li>
+						<li><a href="">Free</a></li>
+						<li><a href="">High rated</a></li>
+						<li><a href="">Hot&amp;New</a></li>
+						<li><a href="">Popular</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="sidebar-block">
+				<p class="sidebar-block-title">Filters</p>
+				<div class="sidebar-block-content">
+					<form action="" id="side-filter">
+						<p class="form-title">Select your preferences:</p>
+						<ul>
+							<li><input id="side-filter-check-0" type="checkbox"><label for="side-filter-check-0">Asian</label></li>
+							<li><input id="side-filter-check-1" type="checkbox"><label for="side-filter-check-1">Blonde</label></li>
+							<li><input id="side-filter-check-2" type="checkbox"><label for="side-filter-check-2">Brunett</label></li>
+							<li><input id="side-filter-check-3" type="checkbox"><label for="side-filter-check-3">Happy Histories</label></li>
+							<li><input id="side-filter-check-4" type="checkbox"><label for="side-filter-check-4">Newbee</label></li>
+							<li><input id="side-filter-check-5" type="checkbox"><label for="side-filter-check-5">Filter </label></li>
+							<li><input id="side-filter-check-6" type="checkbox"><label for="side-filter-check-6">Filter Filter</label></li>
+							<li><input id="side-filter-check-7" type="checkbox"><label for="side-filter-check-7">Filter Filter</label></li>
+						</ul>
+						<input type="submit" value="apply">
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	

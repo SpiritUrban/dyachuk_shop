@@ -1,0 +1,163 @@
+	<main>
+		<div class="model-registation-steps">
+			<div class="reg-step-block passed">
+				<span>Profile creation</span>
+				<i class="uk-icon-chevron-right"></i>
+			</div>
+			<div class="reg-step-block passed">
+				<span>Personal data</span>
+				<i class="uk-icon-chevron-right"></i>
+			</div>
+			<div class="reg-step-block passed">
+				<span>Documents</span>
+				<i class="uk-icon-chevron-right"></i>
+			</div>
+			<div class="reg-step-block active">
+				<span>Account type</span>
+				<i class="uk-icon-chevron-right"></i>
+			</div>
+			<div class="reg-step-block">
+				<span>Finish</span>
+				<i class="uk-icon-check"></i>
+			</div>
+		</div>
+		<section class="create-profile-5">
+			<div class="uk-grid uk-margin-remove">
+				<div class="uk-width-large-1-1 uk-width-xlarge-3-4 uk-container-center uk-padding-remove">
+					<form action="" id="payment-data">
+						<table>
+							<tr>
+								<td><span>Select one:</span></td>
+								<td>
+									<div class="radio-container" (click)="RD.select_one_card = 'Bank_card' " >
+										<input type="radio" name="pay" id="pay-card">
+										<label for="pay-card">
+											<span>Bank card</span>
+											<img src="app/img/credit-cards/bank-cards.png" alt="">
+										</label>
+									</div>
+									or
+									<div class="radio-container" (click)="RD.select_one_card = 'Payoneer' "  >
+										<input type="radio" name="pay" id="payoneer">
+										<label for="payoneer">
+											<img src="app/img/credit-cards/payoneer-logo.png" alt="">
+										</label>
+									</div>
+								</td>
+								<td>
+									<i class="icon-question-circular-button" data-uk-tooltip="{pos:'right', cls: 'custom-tooltip'}" title="Video guide “How to” https://www.payoneer.com"></i>
+								</td>
+							</tr>
+							<tr>
+								<td><span>Account number:</span></td>
+								<td>
+									<div class="input-container multiinput">
+										<input [(ngModel)]="RD.acc_number_1_4" type="text" placeholder="****" maxlength="4" name="acc-number-1-4" required>
+										<input [(ngModel)]="RD.acc_number_2_4" type="text" placeholder="****" maxlength="4" name="acc-number-2-4" required>
+										<input [(ngModel)]="RD.acc_number_3_4" type="text" placeholder="****" maxlength="4" name="acc-number-3-4" required>
+										<input [(ngModel)]="RD.acc_number_4_4" type="text" placeholder="****" maxlength="4" name="acc-number-4-4" required>
+									</div>
+								</td>
+								<td>
+									<p class="notify">Requiered filling the field</p>
+								</td>
+							</tr>
+							<tr>
+								<td><span>Owners First and Last name:</span></td>
+								<td>
+									<div class="input-container small">
+										<input [(ngModel)]="RD.card_firstname" type="text" name="firstname" id="firstname" placeholder="Firstname" required>
+									</div>
+									<div class="input-container small">
+										<input [(ngModel)]="RD.card_lastname" type="text" name="lastname" id="lastname" placeholder="Lastname" required>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td></td>
+								<td>
+									<div class="input-container checkbox-wrapper">
+										<input [(ngModel)]="RD.heckbox" type="checkbox" id="accept">
+										<label for="accept">I Agree with <a href="#agreement-info-modal" data-uk-modal>Model/Studio Services Agreement</a></label>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+						</table>
+						<input (click)="next()" type="submit" value="next">
+					</form>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<div id="agreement-info-modal" class="uk-modal">
+		<div class="uk-modal-dialog uk-modal-dialog-large">
+			<a class="uk-modal-close uk-close"></a>
+			<div class="modal-header">
+				<span>Model/Studio Services Agreement</span>
+			</div>
+			<div class="modal-content">
+				<p>This agreement (hereinafter referred to as "Services Agreement") governs the relationship between:</p>
+				<p>Duodecad IT Services Luxembourg S.à r.l., with registered address at 44, Avenue John F. Kennedy, L-1855 Luxembourg, Grand Duchy of Luxembourg, registered in the Luxembourg Trade and Companies Register under the number (R.C.S.) B 171.358, with a registered capital of EUR 12 500 (hereinafter referred to as "Website Operator") and the Model (hereinafter referred to as the "Model”, "me", "you" or "I") and/or - in case of creation of a Studio Account - the Studios (hereinafter referred to as "Studio" and as the case may be, "you", "me", or "I")</p>
+				<p class="title">Services agreement</p>
+				<p>By filling in and submitting the sign-up form, and by clicking on the button "I have read, understood, and accept the present Services Agreement and expressly declare the acceptance of clauses regarding Declarations (4th clause) and Personal data (5th clause)", the Model/the Studio gives its consent to, and notably its express consent to clauses regarding Declarations (4th clause) and Personal data (5th clause), and accept the following Services Agreement:</p>
+				<p class="title">Definitions</p>
+				<p>"I", "me", "you": either Model, Studio, or both of them, as the case may be.</p>
+				<p>"Model": a person providing adult entertainment services for the Website Operator.</p>
+				<p>"Studio": a person (legal or natural) subscribing to a Studio Account, and who is providing adult entertainment services while contracting Models.</p>
+				<p>"Studio Account": a registered account of the Studio which may also register Models.</p>
+			</div>
+		</div>
+	</div>
+
+	<div id="sidemenu" class="uk-offcanvas">
+		<div class="uk-offcanvas-bar sidemenu-bar">
+			<div class="sidebar-block">
+				<p class="sidebar-block-title">Search</p>
+				<div class="sidebar-block-content">
+					<form action="" id="side-search">
+						<div class="input-container">
+							<input type="text" class="search-text">
+							<button type="submit"></button>
+						</div>
+					</form>
+				</div>
+			</div>
+			<div class="sidebar-block">
+				<p class="sidebar-block-title">Quick filters</p>
+				<div class="sidebar-block-content">
+					<ul class="side-quick-filter-list">
+						<li><a href="">Free</a></li>
+						<li><a href="">High rated</a></li>
+						<li><a href="">Hot&amp;New</a></li>
+						<li><a href="">Popular</a></li>
+						<li><a href="">Free</a></li>
+						<li><a href="">High rated</a></li>
+						<li><a href="">Hot&amp;New</a></li>
+						<li><a href="">Popular</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="sidebar-block">
+				<p class="sidebar-block-title">Filters</p>
+				<div class="sidebar-block-content">
+					<form action="" id="side-filter">
+						<p class="form-title">Select your preferences:</p>
+						<ul>
+							<li><input id="side-filter-check-0" type="checkbox"><label for="side-filter-check-0">Asian</label></li>
+							<li><input id="side-filter-check-1" type="checkbox"><label for="side-filter-check-1">Blonde</label></li>
+							<li><input id="side-filter-check-2" type="checkbox"><label for="side-filter-check-2">Brunett</label></li>
+							<li><input id="side-filter-check-3" type="checkbox"><label for="side-filter-check-3">Happy Histories</label></li>
+							<li><input id="side-filter-check-4" type="checkbox"><label for="side-filter-check-4">Newbee</label></li>
+							<li><input id="side-filter-check-5" type="checkbox"><label for="side-filter-check-5">Filter </label></li>
+							<li><input id="side-filter-check-6" type="checkbox"><label for="side-filter-check-6">Filter Filter</label></li>
+							<li><input id="side-filter-check-7" type="checkbox"><label for="side-filter-check-7">Filter Filter</label></li>
+						</ul>
+						<input type="submit" value="apply">
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>

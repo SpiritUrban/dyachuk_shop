@@ -1,0 +1,424 @@
+section.model-admin .model-upload {
+    position: relative;
+}
+
+section.model-admin .model-upload a.photo-upload, section.model-admin .model-upload a.video-upload {
+    display: block;
+    position: relative;
+    text-align: center;
+    width: 100%;
+    min-height: 260px;
+    margin-bottom: 15px;
+    border: 1px dashed #af0000;
+}
+
+section.model-admin .model-upload a.photo-upload i, section.model-admin .model-upload a.video-upload i {
+    font-size: 140px;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-weight: 400;
+    color: rgba(255,255,255,.59);
+}
+
+section.model-admin .model-upload a.photo-upload span, section.model-admin .model-upload a.video-upload span {
+    display: block;
+    width: 100%;
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    font-size: 24px;
+    font-weight: 400;
+    color: #d16969;
+    line-height: 30px;
+    text-align: center;
+}
+
+section.model-admin .model-upload a.photo-upload i, section.model-admin .model-upload a.video-upload i {
+    font-size: 140px;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-weight: 400;
+    color: rgba(255,255,255,.59);
+}
+
+/* ---------------- Modal window -----------------*/
+
+#channel-upload-modal .uk-modal-dialog, #model-photo-upload .uk-modal-dialog, #model-video-upload .uk-modal-dialog {
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 0;
+    position: relative;
+}
+#channel-upload-modal .uk-modal-dialog .uk-close, #model-photo-upload .uk-modal-dialog .uk-close, #model-video-upload .uk-modal-dialog .uk-close {
+    position: absolute;
+    right: 25px;
+    top: 15px;
+    opacity: .65;
+    margin: 0;
+    float: none;
+    font-size: 24px;
+    color: #fff;
+}
+form {
+    display: block;
+    margin-top: 0em;
+}
+#model-video-upload .modal-header {
+    display: block;
+    padding: 15px 30px 5px;
+    margin: 0;
+    width: 100%;
+    background-color: rgba(22,22,22,.4);
+}
+#channel-upload-modal .modal-header .modal-title p, #model-photo-upload .modal-header .modal-title p, #model-video-upload .modal-header .modal-title p {
+    font-size: 30px;
+    line-height: 30px;
+    margin: 0;
+    font-weight: 600;
+    color: #fff;
+}
+#model-video-upload .modal-header .input-container input[type=file] {
+    display: none;
+}
+#model-video-upload .modal-header .input-container label {
+    display: inline-block;
+    padding: 15px 0;
+    font-size: 18px;
+    color: #fff;
+    font-weight: 300;
+}
+#model-video-upload .modal-header .input-container label span {
+    display: inline-block;
+    font-size: 24px;
+    font-weight: 700;
+    color: #fff;
+    background: linear-gradient(#7c0000,#700504);
+    padding: 15px 30px;
+    transition: all .25 ease;
+    cursor: pointer;
+    margin-right: 15px;
+    border-radius: 8px;
+    margin-bottom: 5px;
+}
+#model-video-upload .modal-header .notify {
+    float: right;
+    background: rgba(235,133,133,.3);
+    border-radius: 8px;
+    max-width: 280px;
+    padding: 5px 5px 5px 40px;
+    transition: all .25s ease;
+    display: none;
+}
+#model-video-upload .modal-header .notify.loading {
+    max-width: 100%;
+    padding: 5px;
+}
+#model-video-upload .modal-header .notify.active {
+    display: block;
+}
+#model-video-upload .modal-header .notify p {
+    font-size: 24px;
+    margin: 0;
+    color: #fff;
+    font-weight: 400;
+    position: relative;
+}
+#model-video-upload .modal-header .notify.loading p {
+    text-align: center;
+    font-size: 20px;
+}
+#model-video-upload .modal-header .notify ul.loading-indicator {
+    width: 100%;
+    margin: 0;
+    padding: 15px 0;
+    text-align: center;
+}
+#model-video-upload .modal-header .notify ul.loading-indicator li {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    display: inline-block;
+    background-color: #FFF;
+    margin: 0 15px;
+    animation: loadingCircles 1s infinite linear;
+}
+#model-video-upload .modal-header .notify ul.loading-indicator li:first-child {
+    animation-delay: .3s;
+}
+#model-video-upload .modal-header .notify ul.loading-indicator li:last-child {
+    animation-delay: .1s;
+}
+/*----*/
+#model-video-upload .modal-content .video-attributes {
+    padding: 25px;
+}
+#model-video-upload .modal-content .video-attributes .input-container {
+    width: 100%;
+    text-align: right;
+    margin-bottom: 10px;
+}
+#model-video-upload .modal-content .video-attributes .input-container label {
+    display: inline-block;
+    font-size: 24px;
+    line-height: 24px;
+    color: #fff;
+    font-weight: 400;
+    vertical-align: top;
+}
+#model-video-upload .modal-content .video-attributes .input-container .input-wrapper, #model-video-upload .modal-content .video-attributes .input-container .select-wrapper {
+    vertical-align: top;
+    display: inline-block;
+    width: 60%;
+    overflow: hidden;
+    background-color: rgba(124,0,0,.43);
+}
+#model-video-upload .modal-content .video-attributes .input-container .input-wrapper input[type=text], #model-video-upload .modal-content .video-attributes .input-container .select-wrapper input[type=text] {
+    display: block;
+    width: 100%;
+    border: none;
+    height: 30px;
+    font-size: 24px;
+    color: #fac0c0;
+    font-weight: 400;
+    background-color: transparent;
+    padding: 0 15px;
+}
+#model-video-upload .modal-content .video-attributes .button-wrapper {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+#model-video-upload .modal-content .video-attributes .button-wrapper input[type=submit] {
+    display: inline-block;
+    font-size: 24px;
+    font-weight: 700;
+    color: #fff;
+    background: linear-gradient(#7c0000,#700504);
+    padding: 15px 30px;
+    transition: all .25 ease;
+    cursor: pointer;
+    margin-right: 15px;
+    border-radius: 8px;
+    border: none;
+}
+/* ---- modal - upload photo --*/
+#model-photo-upload .uk-modal-dialog, #model-video-upload .uk-modal-dialog {
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 0;
+    position: relative;
+}
+#model-photo-upload .uk-modal-dialog .uk-close, #model-video-upload .uk-modal-dialog .uk-close {
+    position: absolute;
+    right: 25px;
+    top: 15px;
+    opacity: .65;
+    margin: 0;
+    float: none;
+    font-size: 24px;
+    color: #fff;
+}
+#model-photo-upload .modal-header, #model-video-upload .modal-header {
+    display: block;
+    padding: 15px 30px 5px;
+    margin: 0;
+    width: 100%;
+    background-color: rgba(22,22,22,.4);
+}
+#model-photo-upload .modal-header .input-container input[type=file], #model-video-upload .modal-header .input-container input[type=file] {
+    display: none;
+}
+#model-photo-upload .modal-header .input-container label, #model-video-upload .modal-header .input-container label {
+    display: inline-block;
+    padding: 15px 0;
+    font-size: 18px;
+    color: #fff;
+    font-weight: 300;
+}
+#model-photo-upload .modal-header .input-container label span, #model-video-upload .modal-header .input-container label span {
+    display: inline-block;
+    font-size: 24px;
+    font-weight: 700;
+    color: #fff;
+    background: linear-gradient(#7c0000,#700504);
+    padding: 15px 30px;
+    transition: all .25 ease;
+    cursor: pointer;
+    margin-right: 15px;
+    border-radius: 8px;
+    margin-bottom: 5px;
+}
+#model-photo-upload .modal-header .notify, #model-video-upload .modal-header .notify {
+    float: right;
+    background: rgba(235,133,133,.3);
+    border-radius: 8px;
+    max-width: 280px;
+    padding: 5px 5px 5px 40px;
+    transition: all .25s ease;
+    display: none;
+}
+#model-photo-upload .modal-header .notify.active, #model-video-upload .modal-header .notify.active {
+    display: block;
+}
+#model-photo-upload .modal-header .notify p, #model-video-upload .modal-header .notify p {
+    font-size: 24px;
+    margin: 0;
+    color: #fff;
+    font-weight: 400;
+    position: relative;
+}
+#model-photo-upload .modal-header .notify p span, #model-video-upload .modal-header .notify p span {
+    display: block;
+    font-size: 18px;
+    font-weight: 300;
+}
+#model-photo-upload .modal-content .video-attributes, #model-video-upload .modal-content .video-attributes {
+    padding: 25px;
+}
+#model-photo-upload .modal-content .video-attributes .input-container, #model-video-upload .modal-content .video-attributes .input-container {
+    width: 100%;
+    text-align: right;
+    margin-bottom: 10px;
+}
+#model-photo-upload .modal-content .video-attributes .input-container label, #model-video-upload .modal-content .video-attributes .input-container label {
+    display: inline-block;
+    font-size: 24px;
+    line-height: 24px;
+    color: #fff;
+    font-weight: 400;
+    vertical-align: top;
+}
+#model-photo-upload .modal-content .video-attributes .input-container .input-wrapper, #model-photo-upload .modal-content .video-attributes .input-container .select-wrapper, #model-video-upload .modal-content .video-attributes .input-container .input-wrapper, #model-video-upload .modal-content .video-attributes .input-container .select-wrapper {
+    vertical-align: top;
+    display: inline-block;
+    width: 60%;
+    overflow: hidden;
+    background-color: rgba(124,0,0,.43);
+}
+#model-photo-upload .modal-content .video-attributes .input-container .input-wrapper input[type=text], #model-photo-upload .modal-content .video-attributes .input-container .select-wrapper input[type=text], #model-video-upload .modal-content .video-attributes .input-container .input-wrapper input[type=text], #model-video-upload .modal-content .video-attributes .input-container .select-wrapper input[type=text] {
+    display: block;
+    width: 100%;
+    border: none;
+    height: 30px;
+    font-size: 24px;
+    color: #fac0c0;
+    font-weight: 400;
+    background-color: transparent;
+    padding: 0 15px;
+}
+#model-photo-upload .modal-content .video-attributes .button-wrapper, #model-video-upload .modal-content .video-attributes .button-wrapper {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+#model-photo-upload .modal-content .video-attributes .button-wrapper input[type=submit], #model-video-upload .modal-content .video-attributes .button-wrapper input[type=submit] {
+    display: inline-block;
+    font-size: 24px;
+    font-weight: 700;
+    color: #fff;
+    background: linear-gradient(#7c0000,#700504);
+    padding: 15px 30px;
+    transition: all .25 ease;
+    cursor: pointer;
+    margin-right: 15px;
+    border-radius: 8px;
+    border: none;
+}
+#model-photo-upload .modal-content .video-attributes .input-container .select-wrapper .uk-form-select, #model-video-upload .modal-content .video-attributes .input-container .input-wrapper .uk-form-select, #model-video-upload .modal-content .video-attributes .input-container .select-wrapper .uk-form-select {
+    float: left;
+    height: 30px;
+    padding: 0 5px;
+    border: 2px dashed #7b0101;
+    transition: all .25s ease;
+}
+#model-photo-upload .modal-content .video-attributes .input-container .select-wrapper .uk-form-select span, #model-video-upload .modal-content .video-attributes .input-container .input-wrapper .uk-form-select span, #model-video-upload .modal-content .video-attributes .input-container .select-wrapper .uk-form-select span {
+    font-size: 24px;
+    line-height: 24px;
+    color: #fac0c0;
+}
+#model-photo-upload .modal-content .video-attributes .input-container .select-wrapper .uk-form-select select option, #model-video-upload .modal-content .video-attributes .input-container .input-wrapper .uk-form-select select option, #model-video-upload .modal-content .video-attributes .input-container .select-wrapper .uk-form-select select option {
+    font-size: 24px;
+    background-color: #000;
+    color: #fac0c0;
+}
+#model-photo-upload .modal-content .video-attributes .input-container .select-wrapper i.add-btn, #model-video-upload .modal-content .video-attributes .input-container .input-wrapper i.add-btn, #model-video-upload .modal-content .video-attributes .input-container .select-wrapper i.add-btn {
+    font-size: 24px;
+    margin: 0 10px;
+    height: 30px;
+    float: left;
+    color: #7b0101;
+    line-height: 30px;
+    transition: all .25s ease;
+    cursor: pointer;
+}
+/* -- stars -- */
+.jq-ry-container>.jq-ry-group-wrapper {
+    position: relative;
+    width: 100%;
+}
+.jq-ry-container>.jq-ry-group-wrapper>.jq-ry-group.jq-ry-normal-group {
+    width: 100%;
+}
+.jq-ry-container>.jq-ry-group-wrapper>.jq-ry-group {
+    position: relative;
+    line-height: 0;
+    z-index: 10;
+    white-space: nowrap;
+}
+.jq-ry-container>.jq-ry-group-wrapper>.jq-ry-group>svg {
+    display: inline-block;
+}
+/*
+svg:hover{
+    fill: white;
+    background: white;
+}
+
+#model-rate:hover{
+
+}*/
+
+.rate-input{
+    margin-top: 20px;
+}
+.uk-form-select:hover{
+    border: 2px dashed white;
+    color: green;
+}
+select:hover{
+    border: 2px dashed white;
+}
+
+
+/* -- Візуалізація заванатження */
+.progres{
+    height:100%; 
+    width: 0%; 
+    display: none; 
+    background: #f4ffa0; 
+    opacity: 0.5; 
+    position: absolute;  
+    border-radius: 8px; 
+    left: 0; 
+    box-shadow: inset #FF0008 0 0 35px 10px, 
+                        #FF0002 0 0 17px 4px; 
+}
+
+label {
+    position: relative;
+} 
+
+
+
+
+/*.alert{    
+    box-shadow: inset #ff0000 0 0 40px 10px,
+	                  #ff0000 0 0 24px 12px;
+}
+.clear_alert{
+    box-shadow: none !important;
+}*/

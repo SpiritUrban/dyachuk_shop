@@ -1,0 +1,15 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    min-height: 100%;
+}
+body{
+    font-family: Roboto, Open-sans, Arial;
+    background: #313131;
+    color: white;
+}
+a{
+    color: orange;
+}

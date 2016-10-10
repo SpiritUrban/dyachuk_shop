@@ -1,0 +1,17 @@
+header{
+    background: #313131;
+    color: white;
+    padding: 0.5em;
+}
+
+h2{
+    display: inline;
+}
+
+span{
+    float: right;
+}
+
+i{
+    vertical-align: sub
+}

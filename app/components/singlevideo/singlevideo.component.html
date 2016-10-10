@@ -1,0 +1,230 @@
+	<main>
+		<section class="single-video">
+			<div class="video-wrapper">
+				<div class="uk-grid uk-width-xlarge-2-3 uk-container-center">
+					<video id="stream-container" width=960 height=540 class="video-js vjs-default-skin" controls>
+					  <source
+					     src="//win.cdn.bonus-tv.ru/TVB8/wfhd/playlist.m3u8"
+					     type="application/x-mpegURL">
+					</video>
+				</div>
+				<div class="limit-notify active"><!-- Notify visible on active class-->
+					<div class="notify-header">
+						<span>Free time limit</span>
+					</div>
+					<div class="notify-content">
+						<p>Tired of timelimits?</p>
+						<p>Sing up and get 9.99 Credits</p>
+						<p><a href="" class="sign-btn">Join now</a> or <a href="#login-standart" data-uk-modal="{center:true}" class="login-btn">Log in</a></p>
+						<!-- Тестовая кнопка для мобильного окна -->
+						<a href="#anonymity" data-uk-modal="{center:true}" class="login-btn">Аnonymity</a>
+					</div>
+				</div>
+			</div>
+			<div class="video-info">
+				<div class="uk-grid uk-width-xlarge-2-3 uk-container-center">
+					<div class="uk-width-large-1-1 uk-padding-remove">
+						<div class="video-title">
+							<p>Great video naming with greatactrieses</p>
+						</div>
+					</div>
+				</div>
+				<div class="uk-grid uk-width-large-1-1 uk-width-xlarge-2-3 uk-container-center video-details">
+					<div class="uk-width-large-1-5 uk-width-xlarge-3-10 uk-padding-remove">
+						<div class="like-cont">
+							<a href="" class="like-btn"></a>
+							<span>Like</span>
+							<a href="" class="dislike-btn"></a>
+							<a href="" class="favorite"></a>
+						</div>
+						<div class="views-cont">
+							<p><span>100,000</span> views <span>85%</span></p>
+							<div class="progress-bar"><span class="fill-bar" style="width: 85%"></span></div>
+						</div>
+						<div class="stats-cont">
+							<span class="like">1500</span>
+							<span class="dislike">1320</span>
+						</div>
+					</div>
+					<div class="uk-width-large-4-5 uk-width-xlarge-7-10 uk-padding-remove">
+						<div class="video-description">
+							<p>About: <span>The best moments in our life are those that awake the soul and makes us  to reach for more, more and more. Let us to start our road together and enjoy the ride.</span></p>
+							<p>From: <span>Lorem ipsum dolor sit amet.</span></p>
+							<p>Categories: <span><a href="">Close up</a><a href="">Dancing</a><a href="">Oil</a></span></p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="video-comments">
+				<div class="uk-grid uk-width-xlarge-2-3 uk-container-center">
+					<div class="uk-width-large-1-1 uk-padding-remove">
+						<div class="comments-container">
+							<div class="title">All comments</div>
+							<div class="login-block"><a href="#login-modal" data-uk-modal="{center:true}">Login</a> or <a href="">Sign Up</a> now to post a comment</div>
+							<div class="comments-filter-container">
+								<form action="" id="comments-filter">
+									<div class="input-container">
+										<select name="" id="">
+											<option value="">New Comments</option>
+											<option value="">Popular Comments</option>
+										</select>
+										<i class="uk-icon-caret-down"></i>
+									</div>
+								</form>
+							</div>
+							<article class="comment-item">
+								<a class="image-wrapper">
+									<img src="app/img/preview_05.jpg" alt="">
+								</a>
+								<div class="comment-details">
+									<a href="" class="comment-author">kinglulis</a>
+									<p class="last-online"><span>5</span> days ago</p>
+								</div>
+								<div class="comment-content">
+									<p>Who is that guy? We need more of him, super hot!</p>
+								</div>
+								<div class="comment-stats">
+									<span class="likes">51</span>
+									<a href="" class="like-btn"></a>
+									<a href="" class="dislike-btn"></a>
+									<a href="" class="reply-btn">Reply</a>
+								</div>
+							</article>
+							<article class="comment-item replyed">
+								<a class="image-wrapper">
+									<img src="app/img/preview_05.jpg" alt="">
+								</a>
+								<div class="comment-details">
+									<a href="" class="comment-author">kinglulis</a>
+									<p class="last-online"><span>5</span> days ago</p>
+								</div>
+								<div class="comment-content">
+									<p>Who is that guy? We need more of him, super hot!</p>
+								</div>
+								<div class="comment-stats">
+									<span class="likes">51</span>
+									<a href="" class="like-btn"></a>
+									<a href="" class="dislike-btn"></a>
+									<a href="" class="reply-btn">Reply</a>
+								</div>
+							</article>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+	<div id="login-standart" class="uk-modal">
+		<div class="uk-modal-dialog">
+			<a class="uk-modal-close uk-close"></a>
+			<div class="modal-title">
+				<span>Login</span>
+			</div>
+			<p>Wellcome to Diamond Dolls</p>
+			<form action="" id="login-form">
+				<div class="input-container">
+					<input type="text" placeholder="Username or E-mail">
+				</div>
+				<div class="input-container">
+					<input type="password" placeholder="Password">
+				</div>
+				<a href="" class="password-reset">Forgot Username or Password?</a>
+				<div class="input-container">
+					<input type="checkbox" id="remember">
+					<label for="remember">Remember me on this computer <span>(not recommended on public or shared computers)</span></label>
+				</div>
+				<input type="submit" value="Login">
+			</form>
+			<p>Still don’t have account? <a href="">Sign Up</a> now</p>
+		</div>
+	</div>
+	<div id="anonymity" class="uk-modal">
+		<div class="uk-modal-dialog uk-modal-dialog-large">
+			<a class="uk-modal-close uk-close"></a>
+			<div class="modal-title">
+				<span>Duodecad ITS Анонимность</span>
+			</div>
+			<div class="modal-content">
+				<div class="image-wrapper">
+					<img src="app/img/icons/anonimity.jpg" alt="">
+				</div>
+				<p>Для того, чтобы гарантировать полную анонимность наших Клиентов, никакая информация, относящаяся к характеру приобретения услуг, в банковском отчёте  показана не будет</p>
+			</div>
+			<p class="details">Получение Ваших транзакций и любой другой информации будет
+отпрален на Ваш зарегистрированный электронный адрес.</p>
+		</div>
+	</div>
+	<form action="" id="comment-reply">
+		<div class="input-container">
+			<textarea name="" id="reply" cols="30" rows="10"></textarea>
+		</div>
+		<input type="reset" value="cancel">
+		<input type="submit" value="post">
+	</form>
+	<div id="sidemenu" class="uk-offcanvas">
+		<div class="uk-offcanvas-bar sidemenu-bar">
+			<div class="sidebar-block">
+				<p class="sidebar-block-title">Search</p>
+				<div class="sidebar-block-content">
+					<form action="" id="side-search">
+						<div class="input-container">
+							<input type="text" class="search-text">
+							<button type="submit"></button>
+						</div>
+					</form>
+				</div>
+			</div>
+			<div class="sidebar-block">
+				<p class="sidebar-block-title">Quick filters</p>
+				<div class="sidebar-block-content">
+					<ul class="side-quick-filter-list">
+						<li><a href="">Free</a></li>
+						<li><a href="">High rated</a></li>
+						<li><a href="">Hot&amp;New</a></li>
+						<li><a href="">Popular</a></li>
+						<li><a href="">Free</a></li>
+						<li><a href="">High rated</a></li>
+						<li><a href="">Hot&amp;New</a></li>
+						<li><a href="">Popular</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="sidebar-block">
+				<p class="sidebar-block-title">Filters</p>
+				<div class="sidebar-block-content">
+					<form action="" id="side-filter">
+						<p class="form-title">Select your preferences:</p>
+						<div class="range-slider-wrapper">
+							<p class="block-title">Duration (minutes)</p>
+							<input type="text" id="side-range-slider">
+							<div id="side-ui-range-slider"></div>
+							<label for="range-slider">
+								<span>0</span>
+								<span>10</span>
+								<span>20</span>
+								<span>30</span>
+								<span>40+</span>
+							</label>
+						</div>
+						<ul>
+							<li><input id="side-filter-check-8" type="checkbox"><label for="side-filter-check-8">All</label></li>
+							<li><input id="side-filter-check-9" type="checkbox"><label for="side-filter-check-9">Professional</label></li>
+							<li><input id="side-filter-check-10" type="checkbox"><label for="side-filter-check-10">Homemade</label></li>
+						</ul>
+						<p class="form-title">Categories</p>
+						<ul>
+							<li><input id="side-filter-check-0" type="checkbox"><label for="side-filter-check-0">Asian</label></li>
+							<li><input id="side-filter-check-1" type="checkbox"><label for="side-filter-check-1">Blonde</label></li>
+							<li><input id="side-filter-check-2" type="checkbox"><label for="side-filter-check-2">Brunett</label></li>
+							<li><input id="side-filter-check-3" type="checkbox"><label for="side-filter-check-3">Happy Histories</label></li>
+							<li><input id="side-filter-check-4" type="checkbox"><label for="side-filter-check-4">Newbee</label></li>
+							<li><input id="side-filter-check-5" type="checkbox"><label for="side-filter-check-5">Filter </label></li>
+							<li><input id="side-filter-check-6" type="checkbox"><label for="side-filter-check-6">Filter Filter</label></li>
+							<li><input id="side-filter-check-7" type="checkbox"><label for="side-filter-check-7">Filter Filter</label></li>
+						</ul>
+						<input type="submit" value="apply">
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>

@@ -1,0 +1,159 @@
+	<main>
+
+		<div class="registation-steps">
+			<div class="uk-grid uk-width-large-1-1 uk-width-xlarge-2-3 uk-container-center">
+				<div class="uk-width-medium-1-3 reg-step-block active">
+					<span>Step1</span>
+					<span>Profile creation</span>
+				</div>
+				<div class="uk-width-medium-1-3 reg-step-block">
+					<span>Step2</span>
+					<span>Model subscription</span>
+				</div>
+				<div class="uk-width-medium-1-3 reg-step-block">
+					<span>Step3</span>
+					<span>Payment method</span>
+				</div>
+			</div>
+		</div>
+
+		<section class="registration">
+			<div class="uk-grid uk-margin-remove">
+				<div class="uk-width-medium-1-1 uk-width-xlarge-2-3 uk-container-center uk-padding-remove">
+					<form action="" id="registration">
+
+
+
+
+
+						<div class="radio-container">
+
+
+							<div class="input-container">
+
+								<input (click)="RD.pay_method = 'Credit / Debit Card' " 
+
+									   type="radio" id="pay-method-1" name="pay-method" value="" checked>
+								<label for="pay-method-1">
+									<p>Кредит/Дебит карта <span>+Получите бонус 9,99 БЕСПЛАТНЫХ кредитов</span></p>
+								</label>
+								<div class="tooltip">
+										<i class="icon-question-circular-button"></i>
+										<p class="tooltip-content">We used to give best relevanted content for your country.</p>
+								</div>
+							</div>
+
+
+							<div class="input-container">
+
+								<input (click)="RD.pay_method = 'Paysafecard'" 
+								
+									   type="radio" id="pay-method-2" name="pay-method" value="">
+								<label for="pay-method-2">
+									<p>Paysafecard</p>
+								</label>
+								<div class="tooltip">
+										<i class="icon-question-circular-button"></i>
+										<p class="tooltip-content">We used to give best relevanted content for your country.</p>
+								</div>
+							</div>
+
+
+							<div class="input-container">
+
+								<input (click)="RD.pay_method = 'Bank wire transfer' "  
+
+										type="radio" id="pay-method-3" name="pay-method" value="">
+								<label for="pay-method-3">
+									<p>Банковский электронный перевод</p>
+								</label>
+								<div class="tooltip">
+										<i class="icon-question-circular-button"></i>
+										<p class="tooltip-content">We used to give best relevanted content for your country.</p>
+								</div>
+							</div>
+
+
+							<div class="input-container">
+
+								<input (click)="RD.pay_method = 'Other methods' "  
+
+										type="radio" id="pay-method-4" name="pay-method" value="">
+								<label for="pay-method-4">
+									<p>Другие методы оплаты</p>
+								</label>
+								<div class="tooltip">
+										<i class="icon-question-circular-button"></i>
+										<p class="tooltip-content">We used to give best relevanted content for your country.</p>
+								</div>
+							</div>
+					
+							<div class="button-wrapper">
+								<a  class="back-btn">Back</a>
+								<input  (click)="next()" type="submit" value="Finish">
+							</div>
+
+						</div>
+
+
+
+
+
+
+					</form>
+				</div>
+			</div>
+		</section>
+
+	</main>
+
+	
+	<div id="sidemenu" class="uk-offcanvas">
+		<div class="uk-offcanvas-bar sidemenu-bar">
+			<div class="sidebar-block">
+				<p class="sidebar-block-title">Search</p>
+				<div class="sidebar-block-content">
+					<form action="" id="side-search">
+						<div class="input-container">
+							<input type="text" class="search-text">
+							<button type="submit"></button>
+						</div>
+					</form>
+				</div>
+			</div>
+			<div class="sidebar-block">
+				<p class="sidebar-block-title">Quick filters</p>
+				<div class="sidebar-block-content">
+					<ul class="side-quick-filter-list">
+						<li><a href="">Free</a></li>
+						<li><a href="">High rated</a></li>
+						<li><a href="">Hot&amp;New</a></li>
+						<li><a href="">Popular</a></li>
+						<li><a href="">Free</a></li>
+						<li><a href="">High rated</a></li>
+						<li><a href="">Hot&amp;New</a></li>
+						<li><a href="">Popular</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="sidebar-block">
+				<p class="sidebar-block-title">Filters</p>
+				<div class="sidebar-block-content">
+					<form action="" id="side-filter">
+						<p class="form-title">Select your preferences:</p>
+						<ul>
+							<li><input id="side-filter-check-0" type="checkbox"><label for="side-filter-check-0">Asian</label></li>
+							<li><input id="side-filter-check-1" type="checkbox"><label for="side-filter-check-1">Blonde</label></li>
+							<li><input id="side-filter-check-2" type="checkbox"><label for="side-filter-check-2">Brunett</label></li>
+							<li><input id="side-filter-check-3" type="checkbox"><label for="side-filter-check-3">Happy Histories</label></li>
+							<li><input id="side-filter-check-4" type="checkbox"><label for="side-filter-check-4">Newbee</label></li>
+							<li><input id="side-filter-check-5" type="checkbox"><label for="side-filter-check-5">Filter </label></li>
+							<li><input id="side-filter-check-6" type="checkbox"><label for="side-filter-check-6">Filter Filter</label></li>
+							<li><input id="side-filter-check-7" type="checkbox"><label for="side-filter-check-7">Filter Filter</label></li>
+						</ul>
+						<input type="submit" value="apply">
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>

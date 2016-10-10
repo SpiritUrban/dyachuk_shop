@@ -1,0 +1,431 @@
+	<main>
+		<img>
+		
+		<div id="log"> </div>
+		<div class="registation-steps">
+			<div class="uk-grid uk-width-large-1-1 uk-width-xlarge-2-3 uk-container-center">
+				<div class="uk-width-medium-1-3 reg-step-block">
+					<span>Step1</span>
+					<span>Profile creation</span>
+				</div>
+				<div class="uk-width-medium-1-3 reg-step-block active">
+					<span>Step2</span>
+					<span>Model subscription</span>
+				</div>
+				<div class="uk-width-medium-1-3 reg-step-block">
+					<span>Step3</span>
+					<span>Payment method</span>
+				</div>
+			</div>
+		</div>
+		<section class="registration">
+			<div class="uk-grid uk-margin-remove">
+				<div class="uk-width-large-1-1 uk-width-xlarge-3-4 uk-container-center uk-padding-remove">
+					<form action="" id="registration">
+						<table class="form-container">
+							<tr>
+								<td><a (click)="back()" class="nav-btn">back</a></td>
+								<td>
+									<p class="form-title">Subscribe on models</p>
+								</td>
+								<td>
+									<a (click)="next()" class="nav-btn">next</a>
+									<!-- <div class="input-container">
+										<input type="submit" value="Next">
+									</div> -->
+								</td>
+							</tr>
+						</table>
+					</form>
+				</div>
+			</div>
+		</section>
+
+
+
+
+
+
+        <!--  Selected models: -->
+		<section *ngIf=" page_mode == 'models' " class="selected-models">
+			<div class="uk-grid bg-shadow uk-margin-remove">
+				<div class="uk-width-xlarge-1-1 uk-padding-remove">
+					<div class="uk-width-1-1 selected-models-header">
+						<div class="block-title">
+							<span>Selected models:</span>
+						</div>
+						<div class="input-container">
+							<select [(ngModel)]="page_mode" name="" id="" style="background-color: rgb(45, 8, 8);">
+								<option value="models" selected > Models   </option>
+								<option value="channels">         Channels </option>
+								<option value="groups">           Groups   </option>
+							</select>
+							<i class="uk-icon-caret-down"></i>
+						</div>
+					</div>
+					<div class="slideset-wrapper" data-uk-slideset="{default: 1, small: 2, medium: 3, large: 4, xlarge: 6, autoplay: true, autoplayInterval: 10000}">
+						<ul class="uk-grid uk-slideset uk-grid-small">
+
+							<li *ngFor="let model of Selected_models; let ix = index" >
+								<a >
+									<div class="image-wrapper" [ngStyle]="{'background-image': 'url( http://rest-ex4-spiriturban.c9users.io:8081/user_files/' + Selected_models[ix]._id + '/avatar.jpeg)'}" >
+									</div>
+								</a>
+							</li>
+
+						</ul>
+						<a href="" class="uk-slidenav uk-slidenav-previous" data-uk-slideset-item="previous"></a>
+						<a href="" class="uk-slidenav uk-slidenav-next" data-uk-slideset-item="next"></a>
+					</div>
+					
+				</div>
+			</div>
+		</section>
+
+
+        <!--  Selected Chanels: -->
+		<section *ngIf=" page_mode == 'channels' " class="selected-models">
+			<div class="uk-grid bg-shadow uk-margin-remove">
+				<div class="uk-width-xlarge-1-1 uk-padding-remove">
+					<div class="uk-width-1-1 selected-models-header">
+						<div class="block-title">
+							<span>Selected channels: </span>
+						</div>
+						<div class="input-container">
+							<select [(ngModel)]="page_mode" name="" id="" style="background-color: rgb(45, 8, 8);">
+								<option value="models" selected > Models   </option>
+								<option value="channels">         Channels </option>
+								<option value="groups">           Groups   </option>
+							</select>
+							<i class="uk-icon-caret-down"></i>
+						</div>
+					</div>
+					<div class="slideset-wrapper" data-uk-slideset="{default: 1, small: 2, medium: 3, large: 4, xlarge: 6, autoplay: true, autoplayInterval: 10000}">
+						<ul class="uk-grid uk-slideset uk-grid-small">
+
+							<li *ngFor="let group of Selected_channels; let ix = index" >
+								<a >
+									<div class="image-wrapper" [ngStyle]="{'background-image': 'url( http://rest-ex4-spiriturban.c9users.io:8081/user_files/' + Selected_channels[ix].name + '/avatar.jpeg)'}" >
+									</div>
+								</a>
+							</li>
+
+						</ul>
+						<a href="" class="uk-slidenav uk-slidenav-previous" data-uk-slideset-item="previous"></a>
+						<a href="" class="uk-slidenav uk-slidenav-next" data-uk-slideset-item="next"></a>
+					</div>
+					
+				</div>
+			</div>
+		</section>				
+
+
+        <!--  Selected Groups: -->
+		<section *ngIf=" page_mode == 'groups' " class="selected-models">
+			<div class="uk-grid bg-shadow uk-margin-remove">
+				<div class="uk-width-xlarge-1-1 uk-padding-remove">
+					<div class="uk-width-1-1 selected-models-header">
+						<div class="block-title">
+							<span>Selected groups:</span>
+						</div>
+						<div class="input-container">
+							<select [(ngModel)]="page_mode" name="" id="" style="background-color: rgb(45, 8, 8);">
+								<option value="models" selected > Models   </option>
+								<option value="channels">         Channels </option>
+								<option value="groups">           Groups   </option>
+							</select>
+							<i class="uk-icon-caret-down"></i>
+						</div>
+					</div>
+					<div class="slideset-wrapper" data-uk-slideset="{default: 1, small: 2, medium: 3, large: 4, xlarge: 6, autoplay: true, autoplayInterval: 10000}">
+						<ul class="uk-grid uk-slideset uk-grid-small">
+
+							<li *ngFor="let group of Selected_groups; let ix = index" >
+								<a >
+									<div class="image-wrapper" [ngStyle]="{'background-image': 'url( http://rest-ex4-spiriturban.c9users.io:8081/user_files/' + Selected_groups[ix].name + '/avatar.jpeg)'}" >
+									</div>
+								</a>
+							</li>
+
+						</ul>
+						<a href="" class="uk-slidenav uk-slidenav-previous" data-uk-slideset-item="previous"></a>
+						<a href="" class="uk-slidenav uk-slidenav-next" data-uk-slideset-item="next"></a>
+					</div>
+					
+				</div>
+			</div>
+		</section>		
+
+
+
+		<!--  FILTERS -->
+		<div *ngIf=" page_mode == 'models' " class="filters">
+			<div class="uk-grid">
+				<!-- button -->
+				<div class="uk-width-medium-1-10">
+					<a (click)="quick_filter_Visible = !quick_filter_Visible;" class="quick-filter-btn"></a>
+				</div>
+				<div class="uk-width-medium-8-10">
+					<div class="search-container">
+						<form action="" id="search">
+							<button type="submit" 
+								(click)="searchRun($event)"
+								[class.btn_search_active]="search_Visible" ></button>
+
+								<!-- (keydown)= "searchRun($event)" -->
+							<input 
+								[ngModel] = "search_Visible_M"                  type="text"    
+								(ngModelChange)= "searchChange($event)"
+								
+								[class.input_search_active]="search_Visible"    class="search-text">
+
+							<!-- button -->
+							<button class="search-btn" 
+								(click)="search_Visible = !search_Visible;" 
+								(click)="searchRun($event)" 
+							></button>
+						</form>
+					</div>
+				</div>
+
+				<!-- button -->
+				<div (click)="filter_container_Visible = !filter_container_Visible;" class="uk-width-medium-1-10">
+					<a class="filter-btn"></a>
+				</div>
+			</div>
+
+			<ul class="quick-filter-list" [class.visible]="quick_filter_Visible" (click)="quick_filter_Visible = !quick_filter_Visible;" >
+				<li><a  >Free</a></li>
+				<li><a  >High rated</a></li>
+				<li><a  >Hot&amp;New</a></li>
+				<li><a  >Popular</a></li>
+			</ul>
+
+			<div class="filter-container" [class.visible]="filter_container_Visible" (click)="filter_container_Visible = !filter_container_Visible;" >
+				<form action="" id="filter">
+					<p class="form-title">Select your preferences:</p>
+					<ul>
+						<li *ngFor="let element of Select_your_preferences" >
+							<input id="side-filter-check-4" type="checkbox">
+								<label (click)="searchNew( element )" for="side-filter-check-4"> {{element}} </label>
+						</li>
+					</ul>
+					<input type="submit" value="apply">
+				</form>
+			</div>
+		</div>
+
+
+
+		<!--  SEARCH RESULT -->
+		<section *ngIf=" ( page_mode == 'models' ) && svitch_search "
+				 class="recently-seen">
+			<div class="block-title">
+				<span> Searhc results </span>
+			</div>
+			<div class="preview-block">
+
+				<div *ngIf="svitch_search" class="uk-grid uk-margin-remove">				
+
+					<div class="preview-item uk-width-small-1-1 uk-width-medium-1-2 uk-width-large-1-4 uk-padding-remove"
+						*ngFor="let model of Result_list; let ix = index" >
+						<a>
+							<div  class="image-wrapper" [ngStyle]="{'background-image': 'url( http://rest-ex4-spiriturban.c9users.io:8081/user_files/' + Result_list[ix]._id + '/avatar.jpeg)'}" >
+								<div (click)="choose( Result_list[ix], 'search_models' )" style=" width: 100%; height: 100%;" > </div>
+								<button (click)="like(Result_list[ix]._id, ix)" class="to-favor"> {{Result_list[ix].likes}} likes </button>
+								<span class="tag-new">new </span>
+								<span class="name"> Model: {{Result_list[ix].username}} </span>
+							</div>
+						</a>
+					</div>
+
+				</div>
+			</div>
+		</section>
+
+
+
+
+		
+		<!--  BEST ALIGMENT -->
+		<section *ngIf=" page_mode == 'models' " class="recently-seen">
+			<div class="block-title">
+				<span>Best alignment</span>				
+			</div>
+			<div class="preview-block">
+
+				<div *ngIf="svitch" class="uk-grid uk-margin-remove">				
+
+					<div class="preview-item uk-width-small-1-1 uk-width-medium-1-2 uk-width-large-1-4 uk-padding-remove"
+						*ngFor="let model of Best_models; let ix = index" >
+						<a>
+							<div  class="image-wrapper" [ngStyle]="{'background-image': 'url( http://rest-ex4-spiriturban.c9users.io:8081/user_files/' + Best_models[ix]._id + '/avatar.jpeg)'}" >
+								<div (click)="choose( Best_models[ix], 'models' )" style=" width: 100%; height: 100%;" > </div>
+								<button (click)="like(Best_models[ix]._id, ix, 'Best_models')" class="to-favor"> {{Best_models[ix].likes}} likes </button>
+								<span class="tag-new">new </span>
+								<span class="name"> Model: {{Best_models[ix].username}} </span>
+							</div>
+						</a>
+					</div>
+
+				</div>
+			</div>
+		</section>
+
+		<!--  RESENTLY SEEN -->
+		<section *ngIf=" page_mode == 'models' " class="best-alignment">
+			<div class="block-title">				
+				<span>Recently seen</span>
+			</div>
+			<div class="preview-block">
+
+				<div *ngIf="svitch2" class="uk-grid uk-margin-remove">
+
+					<div class="uk-grid uk-width-medium-1-1 uk-width-xlarge-1-2 uk-margin-remove uk-padding-remove"	>
+
+						<div class="preview-item uk-width-small-1-1 uk-width-medium-1-2 uk-padding-remove"
+							*ngFor="let model of Recently_seen; let ix = index">
+							<a>
+								<div class="image-wrapper" [ngStyle]="{'background-image': 'url( http://rest-ex4-spiriturban.c9users.io:8081/user_files/' + Recently_seen[ix]._id + '/avatar.jpeg)'}" >
+									<div (click)="choose( Recently_seen[ix], 'models' )" style=" width: 100%; height: 100%;" > </div>								
+									<button (click)="like(Recently_seen[ix]._id, ix, 'Recently_seen')" class="to-favor"> {{Recently_seen[ix].likes}} likes </button>
+									<span class="tag-new">new</span>
+									<span class="name"> Model: {{Recently_seen[ix].username}} </span>
+								</div>
+							</a>
+						</div>
+					</div>
+
+
+					<div *ngIf="Recently_seen[2]" class="uk-width-small-1-1 uk-width-xlarge-1-2 preview-item large uk-padding-remove" >
+						
+						<a>
+							<div class="image-wrapper" [ngStyle]="{'background-image': 'url( http://rest-ex4-spiriturban.c9users.io:8081/user_files/' + Recently_seen[2]._id + '/avatar.jpeg)'}" >
+									<div (click)="choose( Recently_seen[2], 'models' )" style=" width: 100%; height: 100%;" > </div>
+						
+									<button (click)="like(Recently_seen[2]._id, 2, 'Recently_seen')" class="to-favor"> {{Recently_seen[2].likes}} likes </button>
+									<!--											
+									<span class="tag-new">new</span>
+									<span class="name"> Model: {{Recently_seen[ix].username}} </span>
+									-->
+							</div>
+						</a>
+					</div>
+					
+
+				</div>
+			</div>
+
+		</section>
+
+
+
+		<!--  CHANNELS  -->
+		<section *ngIf=" page_mode == 'channels' " class="recently-seen">
+			<div class="block-title">
+				<span>Groups</span>
+			</div>
+			<div class="preview-block">
+
+				<div *ngIf="svitch_channels" class="uk-grid uk-margin-remove">				
+
+					<div class="preview-item uk-width-small-1-1 uk-width-medium-1-2 uk-width-large-1-4 uk-padding-remove"
+						*ngFor="let model of Channels_list; let iix = index" >
+						<a>
+							<div  class="image-wrapper" [ngStyle]="{'background-image': 'url( http://rest-ex4-spiriturban.c9users.io:8081/user_files/' + Channels_list[iix].name + '/avatar.jpeg)'}" >
+								<div (click)="choose( Channels_list[iix], 'channels' )" style=" width: 100%; height: 100%;" > </div>
+								<span class="tag-new">new </span>
+								<span class="name"> Name: {{Channels_list[iix].name}} </span>
+							</div>
+						</a>
+					</div>
+
+				</div>
+			</div>
+		</section>
+
+
+
+		<!--  GROUPS -->
+		<section *ngIf=" page_mode == 'groups' " class="recently-seen">
+			<div class="block-title">
+				<span>Groups</span>
+			</div>
+			<div class="preview-block">
+
+				<div *ngIf="svitch_groups" class="uk-grid uk-margin-remove">				
+
+					<div class="preview-item uk-width-small-1-1 uk-width-medium-1-2 uk-width-large-1-4 uk-padding-remove"
+						*ngFor="let model of Groups_list; let iix = index" >
+						<a>
+							<div  class="image-wrapper" [ngStyle]="{'background-image': 'url( http://rest-ex4-spiriturban.c9users.io:8081/user_files/' + Groups_list[iix].name + '/avatar.jpeg)'}" >
+								<div (click)="choose( Groups_list[iix], 'groups' )" style=" width: 100%; height: 100%;" > </div>
+								<span class="tag-new">new </span>
+								<span class="name"> Name: {{Groups_list[iix].name}} </span>
+							</div>
+						</a>
+					</div>
+
+				</div>
+			</div>
+		</section>
+
+	</main>
+
+
+
+
+
+
+
+
+
+	<!--  LEFT MENU -->
+	<div id="sidemenu" class="uk-offcanvas">
+		<div class="uk-offcanvas-bar sidemenu-bar">
+			<div class="sidebar-block">
+				<p class="sidebar-block-title">Search</p>
+				<div class="sidebar-block-content">
+					<form action="" id="side-search">
+						<div class="input-container">
+							<input type="text" class="search-text">
+							<button type="submit"></button>
+						</div>
+					</form>
+				</div>
+			</div>
+			<div class="sidebar-block">
+				<p class="sidebar-block-title">Quick filters</p>
+				<div class="sidebar-block-content">
+					<ul class="side-quick-filter-list">
+						<li><a href="">Free</a></li>
+						<li><a href="">High rated</a></li>
+						<li><a href="">Hot&amp;New</a></li>
+						<li><a href="">Popular</a></li>
+						<li><a href="">Free</a></li>
+						<li><a href="">High rated</a></li>
+						<li><a href="">Hot&amp;New</a></li>
+						<li><a href="">Popular</a></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="sidebar-block">
+				<p class="sidebar-block-title">Filters</p>
+				<div class="sidebar-block-content">
+
+					<form action="" id="side-filter">
+						<p class="form-title">Select your preferences:</p>
+						<ul>
+							<li *ngFor="let element of Select_your_preferences" >
+								<input id="side-filter-check-4" type="checkbox">
+									<label for="side-filter-check-4"> {{element}} </label>
+							</li>
+						</ul>
+						<input type="submit" value="apply">
+					</form>
+
+				</div>
+			</div>
+		</div>
+	</div>
