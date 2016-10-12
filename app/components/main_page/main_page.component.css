@@ -1,6 +1,46 @@
 main{
 	background: white;
-	color: orange ;
+	color: #364977 ;
 	min-height: 1000px;
+	/* padding: 0.5em; */
+	margin: 3em 0 0 0;	
+}
+.page{
 	padding: 0.5em;
 }
+.insert{
+	width: 100%;
+	height: 15em;
+	background: #cacdd6;
+	background-image: url( http://babyexpo.by/wp-content/uploads/2016/05/Razdel_Games_and_Toys.jpg );
+	background-size: cover;
+	/*border-radius: 0.5em;*/ 
+}
+.slide{
+	width: 100%;
+	border-bottom: solid 2px #345094;
+}
+ h1{
+	 margin: 0.5em 0 0.5em 0;
+ }
+h2{
+	 margin: 0.5em 0 0.5em 0;
+ }
+
+.cards{
+	float: left;
+	/*background: #cacdd6;*/
+}
+ .card{
+	 border: solid 2px #345094;
+	 border-radius: 0.5em;
+	 width: 10em;
+	 height: 10em;
+	 background: #cacdd6;
+	 float: left;
+	 margin-right: 0.5em;
+	 margin-bottom: 0.5em;
+	 text-align: center;
+	 padding: 0.5em;
+	 background-image: url(../res/img/1.jpg );
+ }

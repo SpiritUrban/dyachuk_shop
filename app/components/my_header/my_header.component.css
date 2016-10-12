@@ -1,11 +1,21 @@
+
 header{
-    background: #313131;
+    background: #364977;
+    background: #345094;
     color: white;
-    padding: 0.5em;
+    /*padding: 0.5em; !!! */
+    height: 4em;
+    border-radius: 0 0 1em 1em;
+
+    position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  
 }
 
 h2{
-    display: inline;
+    
 }
 
 span{
@@ -14,4 +24,20 @@ span{
 
 i{
     vertical-align: sub
+}
+.logo{
+    display: block;
+    float: left;
+    margin: 0 0 0 0.5em;
+}
+.logo-title{
+    display: block;
+    float: left;
+    line-height: 2.5em;
+    margin-left: 0.5em;
+
+}
+.right{
+    line-height: 4em;
+    margin: 0 0.5em 0 0;
 }
